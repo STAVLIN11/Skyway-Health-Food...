@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width,initial‑scale=1.0">
+  <title>Products – Skyway Health Food</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Our Health Products</h1>
+  </header>
+
+  <main>
+    <div class="products-list">
+      <!-- Repeat for each product -->
+      <div class="product-card">
+        <img src="images/bone-care.jpg" alt="Bone Care">
+        <h3>Bone Care</h3>
+        <p>Lorem ipsum short description…</p>
+        <button onclick="viewProduct('bone')">View & Buy</button>
+      </div>
+      <!-- similarly d‑care, nutri‑mix, slim‑care -->
+    </div>
+
+    <section id="product-detail" class="product-detail hidden">
+      <h2 id="pd-title"></h2>
+      <img id="pd-img" src="" alt="">
+      <p id="pd-desc"></p>
+      <div>
+        <label>Quantity:
+          <input type="number" id="pd-qty" value="1" min="1">
+        </label>
+      </div>
+      <button onclick="addToCart()">Add to Cart</button>
+
+      <div id="reviews">
+        <h3>Customer Reviews</h3>
+        <div id="review-list"></div>
+        <h4>Add Review</h4>
+        <textarea id="new-review" placeholder="Your comment"></textarea><br>
+        <input type="file" id="rev-photo"><br>
+        <button onclick="submitReview()">Submit Review</button>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
